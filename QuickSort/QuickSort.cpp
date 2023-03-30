@@ -38,6 +38,41 @@ void swap(int x, int y) {
 
 void q_short(int low, int high) {
     int pivot, i, j;
+
+    if (low > high)                                                 // langkah 1
+        return;
+
+    pivot = arr[low];                                               // langkah 2
+
+    i = low + 1;                                                    // langkah 3
+    j = high;                                                       // langkah 4
+
+    while (i <= j){                                                 // langkah 10
+
+        while ((arr[i] <= pivot) && (i <= high)){                   // langkah 5
+            i++;                                                    // langkah 6
+            cmp_count++;
+        }
+
+        while ((arr[j] > pivot) && (j >= low)){                     // langkah 7
+            j--;                                                    // langkah 8
+            cmp_count++;
+        }
+        cmp_count++;
+
+
+        if (i < j) {                                                // langkah 9
+            swap(i, j);
+            mov_count++;
+        }
+    }
+    if (low < j) {                                                  // langkah 11
+        swap(low, j);
+        mov_count++;
+    }
+
+    q_short(low, j - 1);                                            // langkah 12
+    q_short(j + 1, high);                                           // langkah 13
 }
 
 int main() {
