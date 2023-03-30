@@ -75,6 +75,19 @@ void q_short(int low, int high) {
     q_short(j + 1, high);                                           // langkah 13
 }
 
+void display() {
+    cout << endl;
+    cout << "=====================================" << endl;
+    cout << "= element array yang telah tersusun =" << endl;
+    cout << "=====================================" << endl;
+
+    for (int i = 0; i < n; i++) {                                // looping memasukan data ke array
+        cout << arr[i] << " ";
+    }
+    cout << "\n\n berapa kali data di bandingkan(Comparasions): " << cmp_count << endl;
+    cout << "berapa kali data di ubah(movements): " << cmp_count << endl;
+}
+
 int main() {
 
 }
