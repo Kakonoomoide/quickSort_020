@@ -7,12 +7,12 @@ int n = 0, cmp_count = 0, mov_count = 0;
 
 void  input() {
 
-    while (true) {                                              //looping
+    while (true) {                                             
         cout << "masukan elemen/jumlah data array : \n";
         cin >> n;
-        if (n <= 20)                                            // n <= 20
-            break;                                              // keluar looping
-        else {                                                  // n > 20
+        if (n <= 20)                                           
+            break;                                              
+        else {                                                 
             cout << "array hanya bisa memiliki maksimal 20 elemen";
         }
     }
@@ -22,7 +22,7 @@ void  input() {
     cout << "     masukan elemen array        " << endl;
     cout << "=================================" << endl;
 
-    for (int i = 0; i < n; i++) {                                // looping memasukan data ke array
+    for (int i = 0; i < n; i++) {                             
         cout << "masukan data ke-" << (i + 1) << ":";
         cin >> arr[i];
     }
