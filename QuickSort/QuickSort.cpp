@@ -19,19 +19,26 @@ void  input() {
 
     cout << endl;
     cout << "=================================" << endl;
-    cout << "     masukan elemen array        " << endl;
+    cout << "=     masukan elemen array      =" << endl;
     cout << "=================================" << endl;
 
     for (int i = 0; i < n; i++) {                             
-        cout << "masukan data ke-" << (i + 1) << ":";
+        cout << "<" << (i + 1) << ">";
         cin >> arr[i];
     }
 
 }
 
+void swap(int x, int y) {
+    int temp;
+    temp = arr[x];
+    arr[x] = arr[y];
+    arr[y] = temp;
+}
 
-
-
+void q_short(int low, int high) {
+    int pivot, i, j;
+}
 
 int main() {
 
